@@ -10,7 +10,15 @@ import requests
 
 
 
-from pandas.io.json._normalize import nested_to_record
+#from pandas.io.json._normalize import nested_to_record
+'''
+fix the ModuleNotFoundError: No module named 'pandas.io.json.normalize'
+https://github.com/GeneralMills/pytrends/issues/317
+
+'''
+
+from pandas.io.json.normalize import nested_to_record
+
 from requests.packages.urllib3.util.retry import Retry
 
 from pytrends import exceptions
