@@ -9,13 +9,18 @@ Into
 ## interest over timestamps
 
 start_time='2019-10-31T12'
+
 end_time='2019-10-31T22'
+
 timeframe=start_time+' '+end_time
+
 pytrend.build_payload(timeframe=timeframe,kw_list=['amazon'])
+
 df = pytrend.interest_over_time()
+
 df.head()
 
-## ------------------------------------------------------------------------------------------------------------------
+## --------------------------------------------------------------------------------------
 # pytrends
 
 ## Introduction
