@@ -1,3 +1,21 @@
+## fix the ModuleNotFoundError: No module named 'pandas.io.json.normalize'
+  https://github.com/GeneralMills/pytrends/issues/317
+After installation, change the line in request.py:
+	from pandas.io.json._normalize import nested_to_record
+Into 
+	from pandas.io.json.normalize import nested_to_record
+
+
+## interest over timestamps
+
+start_time='2019-10-31T12'
+end_time='2019-10-31T22'
+timeframe=start_time+' '+end_time
+pytrend.build_payload(timeframe=timeframe,kw_list=['amazon'])
+df = pytrend.interest_over_time()
+df.head()
+
+## ------------------------------------------------------------------------------------------------------------------
 # pytrends
 
 ## Introduction
